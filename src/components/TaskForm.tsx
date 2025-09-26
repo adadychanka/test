@@ -44,8 +44,6 @@ export const TaskForm = ({ onSubmit }: TaskFormProps) => {
     setForm({ title: "", description: "", priority: "medium", dueDate: "" });
   };
 
-  console.log('form', form);
-
   return (
     <Card>
       <CardHeader>
@@ -79,7 +77,6 @@ export const TaskForm = ({ onSubmit }: TaskFormProps) => {
             <div>
               <label className="block mb-1 font-medium">Priority</label>
               <Select name="priority" value={form.priority} onValueChange={(value) => {
-                console.log(value);
                 setForm({ ...form, priority: value as Priority })
               }}>
                 <SelectTrigger className="w-full">
