@@ -24,6 +24,7 @@ const Index = () => {
     }
   ]);
 
+  
   useEffect(function fillTasksListOnMount() {
     const storedTasks = localStorage.getItem(TASKS_STORAGE_KEY);
     if (storedTasks) {
@@ -238,7 +239,7 @@ const Index = () => {
 
                   {/* TODO: Add TaskForm component here when showForm is true */}
                   {showForm && (
-                    <TaskForm />
+                    <TaskForm onSubmit={() => {}} />
                   )}
 
                   {/* Task List Area */}
@@ -258,7 +259,7 @@ const Index = () => {
                         {tasks.map((task) => {
                           if (editingTaskId === task.id) {
                             return (
-                              <TaskForm />
+                              <TaskForm onSubmit={() => {}} />
                             )
                           }
 
