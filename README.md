@@ -142,3 +142,51 @@ Good luck! 🚀
 ---
 
 **Note:** This test evaluates practical skills used in day-to-day development. Focus on writing production-quality code that you'd be proud to show in a code review.
+
+---
+
+### Result of the Assignment
+
+I ran out of time and stopped at Question 4. Below is the full list of completed work, along with notes on possible future improvements.
+
+#### Question 1: Project Setup & Understanding
+ - [x] Installed dependencies using Bun (since bun.lockb was present).
+ - [x] Ran the project, reviewed the tech stack and libraries from package.json, and explored the overall app structure.
+
+#### Question 2: Component Creation
+ - [x] Reworked the existing TaskCard skeleton to meet requirements.
+ - [x] Used typed props and utility objects.
+ - [x] Chose to pass individual fields instead of the entire Task object to reduce coupling and improve reusability.
+ - [x] Added title, description, priority, completion status, due date, delete, and edit buttons to the card UI.
+ - [x] Implemented click handlers for edit and delete actions.
+ - [x] Made the layout partially responsive (due to time constraints, responsiveness wasn’t fully refined).
+
+#### Question 3: State Management
+ - [x] Implemented a function to add new tasks to the state (to be used once TaskForm is integrated).
+ - [x] Added functionality to edit tasks in the state.
+ - [x] Built complete/uncomplete task toggling using the edit task function.
+ - [x] Implemented task deletion by filtering tasks from the state.
+ - [x] Added localStorage support for persisting tasks (not fully tested due to time constraints).
+ 
+Notes:
+ - Focused primarily on functionality due to time pressure.
+ - Logic could be extracted into a custom hook for cleaner separation.
+ - Using useState for managing the task list is suboptimal; useReducer would better model actions and state transitions in a declarative way.
+
+#### Question 4: Form Implementation
+ - [x] Implemented TaskForm UI to handle:
+ - [x] Title, description, priority selection, and due date input.
+ - [x] Basic built-in validation plus a custom check for empty titles.
+ - [x] Added submit functionality with state reset after submission.
+ - [ ] Did not have time to fully integrate the form into the app and connect it with existing logic.
+ 
+Notes:
+- Chose useState for simplicity under time constraints.
+- Would prefer react-hook-form in production since it offers more utilities for managing form state and validation.
+
+#### General Feedback
+Due to limited time, some code is not production-ready. Improvements I would make if given more time:
+- Use useMemo and useCallback to prevent unnecessary re-renders.
+- Extract reusable code into separate components or custom hooks to improve readability and maintainability
+- Less use of "native" solutions and give priority to established libraries where appropriate.
+
